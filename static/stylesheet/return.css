@@ -1,0 +1,108 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Change font family */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    /* Light gray background */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+    font-size: 28px;
+    /* Increase font size */
+}
+
+/* Processed Images Styles */
+.processed-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns */
+    grid-gap: 20px;
+    /* Gap between images */
+    margin-top: 20px;
+    /* Margin from the top */
+}
+
+.processed-images img {
+    max-width: 100%;
+    /* Ensure images don't exceed container width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Light shadow */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border-radius: 8px;
+    /* Rounder corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Lighter shadow */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+li a {
+    color: #333;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #666;
+}
+
+li img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Link Styles */
+a {
+    display: block;
+    text-align: center;
+    color: #007bff;
+    /* Blue link color */
+    text-decoration: none;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+a:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+}
+
+#loadingText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the text vertically and horizontally */
+    display: none;
+    color: #333;
+    font-size: 1.2em;
+}

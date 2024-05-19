@@ -1,0 +1,137 @@
+/* Styles for index.html */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f86b20;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for return.html */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button,
+input[type="submit"] {
+    display: block;
+    margin: 10px auto;
+    /* Center the buttons */
+    background-color: #007bff;
+    /* Blue color for background */
+    color: #fff;
+    /* White color for text */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding around text */
+    border-radius: 4px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Darker blue color on hover */
+}
+
+/* Customize the "Choose File" input */
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+    /* Center the input */
+    padding: 10px;
+    /* Padding around input */
+    border: 1px solid #ccc;
+    /* Border */
+    border-radius: 4px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style on hover */
+}
+
+input[type="file"]:hover {
+    background-color: #f8f9fa;
+    /* Light gray background on hover */
+}
+
+/* loader.css */
+
+.loader {
+    border: 6px solid #f3f3f3;
+    /* Light grey */
+    border-top: 6px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    /* Spin animation */
+    margin: 0 auto;
+    /* Center the loader */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

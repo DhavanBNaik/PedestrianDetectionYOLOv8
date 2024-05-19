@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Items</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesheet/return.css')}}">
+    <!-- Link to the CSS stylesheet -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Processed Videos</h1>
+        <ul>
+            {% for video in videos %}
+            <li><a href="{{ url_for('open_with_media_player', filename=video) }}">{{ video }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h1>Processed Images</h1>
+        <ul>
+            {% for image in images %}
+            <li><img src="data:image/jpeg;base64,{{ image }}" alt="Processed Image"></li>
+            {% endfor %}
+        </ul>
+
+
+        <a href="{{ url_for('index') }}">Go back to Index Page</a>
+    </div>
+
+
+    <div id="loading" style="display: none;">Loading...</div>
+
+    <script>
+
+        document.getElementById('loading').style.display = 'block';
+
+        window.onload = function () {
+            document.getElementById('loading').style.display = 'none';
+        };
+    </script>
+</body>
+
+</html>

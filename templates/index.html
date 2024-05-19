@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/styles.css') }}">
+    <!-- Link to the CSS stylesheet -->
+    <script>
+        function showLoading() {
+            var loader = document.getElementById('loading');
+            var loadingText = document.getElementById('loadingText');
+
+            loader.style.display = 'block';
+            loadingText.style.display = 'block';
+
+            var dots = 0;
+            var interval = setInterval(function () {
+                if (dots < 3) {
+                    loadingText.textContent += '.';
+                    dots++;
+                } else {
+                    loadingText.textContent = 'Processing';
+                    dots = 0;
+                }
+            }, 500);
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pedestrian Detection</h1>
+
+
+        <div class="form-container">
+            <form action="{{ url_for('process') }}" method="post" enctype="multipart/form-data"
+                onsubmit="showLoading()">
+                <input type="file" name="file" accept="video/*">
+                <button type="submit">Process</button>
+            </form>
+        </div>
+
+        <div class="go-to-processed-page">
+            <form action="{{ url_for('return_page') }}">
+                <button type="submit">Go to Processed Page</button>
+            </form>
+        </div>
+
+        <div class="loader" id="loading" style="display: none;"></div>
+        <div id="loadingText" style="display: none;">Processing...</div>
+
+    </div>
+</body>
+
+</html>

@@ -3,15 +3,18 @@ It should work, But if it dosent use the [Modified DeepSort](https://github.com/
 
 Using our trained model i.e.., 
 > "best.pt"
+
 Change the Model To yours or use 
 > "yolov8n.pt" 
+
 for a default Yolov8 model from Ultralytics
-RTD => real time detection
 
 The Flask app i.e..,
 > app.py
+
 is a simple website that can take Video/Image input and outputs the detection and tracked respective Video/Image
 
+RTD => real time detection
 For real time detection using default webcam run 
 > main_RTD.py
 

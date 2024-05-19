@@ -17,6 +17,7 @@ For real time detection using default webcam run
 
 Specific Requirements During Development:
 ```
+
 Ultralytics 8.2.1
 torch 2.2.2
 torchvision 0.17.2
